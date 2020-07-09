@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Home</title>
+</head>
+<body>
+  <!-- Begin Main Page --->
+    <div class="main">
+        <div class="sidebar">
+          <ul class="links unstyled list-hover-slide">
+            <li class="active"><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> Configuration</a></li>
+            <li id="info"><a href="info.html"><i class="fa fa-address-card-o" aria-hidden="true"></i> Information</a></li>
+          </ul>
+        </div>
+          <div class="container">
+            <div class="tabs">
+              <input id="tab1" type="radio" name="tabs" checked>
+              <label class="label_tab" for="tab1">Serveur</label>
+              <input id="tab2" type="radio" name="tabs" >
+              <label class="label_tab" for="tab2">Client</label>
+              <input id="tab3" type="radio" name="tabs" >
+              <label class="label_tab" for="tab3">Wifi</label>
+              <div class="content">
+                 <div id="content1">
+                    <form action="#" method="post" class="form_serveur" id="form_serveur">
+                      <div class="form-group">
+                        <label for="ip_serveur">Ip :</label>
+                        <input type="text" name="ip_serveur" class="ip_adresse" id="ip_serveur" placeholder="Enter Your IP"required />
+                        <span class="error_msg"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="subnet_serveur">Subnet :</label>
+                        <input type="text" name="subnet_serveur" id="subnet_serveur" placeholder="Enter Your SUBNET"required />
+                        <span class="error_msg"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="getway_serveur">Getway :</label>
+                        <input type="text" name="getway_serveur" id="getway_serveur" placeholder="Enter Your GETWAY"required />
+                        <span class="error_msg"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="protocol">Protocol :</label>
+                        <select name="protocol" id="protocol">
+                          <option disabled>Choose Your Protocol</option>
+                          <option value="udp">UDP</option>
+                          <option value="tcp">TCP</option>
+                          <option value="rqtt">RQTT</option>
+                          <option value="http">HTTP/HTTPS</option>
+                        </select>
+                        <span class="error_msg"></span>
+                      </div>
+                      <div class="row" id="loaders">
+                        <img id="spinner" src="img/spinner.gif" width="150">
+                      </div>
+                      <div class="box_btn">
+                        <button type="submit" id="submit_serveur" class="btn_submit">Save</button>
+                        <button type="button"  id="clrBtn_serveur" class="btn_clear">Clear</button>
+                      </div>
+                    </form>
+                 </div>
+                 <div id="content2">
+                  <form action="#" method="post" class="form_client" id="form_client">
+                    <div class="form-group">
+                      <label for="ip_client">Ip :</label>
+                      <input type="text" name="ip_client" id="ip_client" placeholder="Enter Your IP"required />
+                      <span class="error_msg"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="subnet_client">Subnet :</label>
+                      <input type="text" name="subnet_client" id="subnet_client" placeholder="Enter Your SUBNET"required />
+                      <span class="error_msg"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="getway_client">Getway :</label>
+                      <input type="text" name="getway_client" id="getway_client" placeholder="Enter Your GETWAY"required />
+                      <span class="error_msg"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="port">Port (HTTP/HTTPS) :</label>
+                      <input type="text" name="port" id="port" placeholder="Enter Your Port"required />
+                      <span class="error_msg"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="interval">Interval :</label>
+                      <select name="interval" id="interval">
+                        <option disabled>Choose Your Interval</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                      </select>
+                      <span class="error_msg"></span>
+                    </div>
+                    <div class="row" id="loaders">
+                      <img id="spinner" src="img/spinner.gif" width="150">
+                    </div>
+                    <div class="box_btn">
+                      <button type="submit" id="submit_clt" class="btn_submit">Save</button>
+                      <button type="button"  id="clrBtn_Clt" class="btn_clear">Clear</button>
+                    </div>
+                  </form>
+                 </div>
+                 <div id="content3">
+                  <form action="#" method="post" class="form_wifi" id="form_wifi">
+                    <div class="form-group">
+                      <label for="ssid">SSID :</label>
+                      <input type="text" name="ssid" id="ssid" placeholder="Enter Your SSID" required/>
+                      <span class="error_msg"></span>
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password :</label>
+                      <input type="password" name="password" id="password" placeholder="Enter Your Password"  required/>
+                    </div>
+                    <div class="row" id="loaders">
+                      <img id="spinner" src="img/spinner.gif" width="150">
+                    </div>
+                    <div class="box_btn">
+                      <button type="submit" id="submit_wifi" class="btn_submit btn1">Save</button>
+                      <button type="button" id="clrBtn_wifi" class="btn_clear btn2">Clear</button>
+                    </div>
+                  </form>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- End Main Page --->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/login.css">
+      <title>Login</title>
+   </head>
+   <body>
+      <!-- Start Login -->
+      <div class="container">
+      <div class="frame">
+         <div class="nav">
+            <h2 class="logo">Sign in</h2>
+         </div>
+         <div ng-app ng-init="checked = false">
+            <form class="form-signin" action="" method="post" name="form">
+               <label for="username">Username</label>
+               <input class="form-styling" type="text" name="username" placeholder=""/>
+               <label for="password">Password</label>
+               <input class="form-styling" type="text" name="password" placeholder=""/>
+               <div class="btn-animate">
+                  <a class="btn-signin">Sign in</a>
+               </div>
+            </form>
+         </div>
+      </div>
+      <!-- End Login -->
+      <script src="js/main.js"></script>
+   </body>
+</html>
